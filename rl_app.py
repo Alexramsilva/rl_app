@@ -66,7 +66,7 @@ cost = st.sidebar.number_input(
     "Costo de transacción",
     min_value=0.0,
     max_value=0.02,
-    value=0.001,
+    value=0.0025,
     step=0.0001,
     format="%.4f"
 )
