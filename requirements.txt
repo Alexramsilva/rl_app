@@ -1,6 +1,9 @@
 streamlit
 yfinance
+stable-baselines3
+gymnasium
 pandas
 numpy
+ta
 matplotlib
-
+torch
