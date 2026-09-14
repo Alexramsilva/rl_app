@@ -20,7 +20,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.image("NQH.png", caption="Universidad Nacional Rosario Castellanos", width=300)
+# st.image("NQH.png", caption="Universidad Nacional Rosario Castellanos", width=300)
 st.title("Nopal Quant")
 st.subheader("Reinforcement Learning Trading Agent")
 
