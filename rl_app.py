@@ -20,7 +20,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.image("NQH.jpg", caption="A research-driven trading", width=100)
+st.image("NQH.jpg", caption="A research-driven trading", width=300)
 st.title("Nopal Quant")
 st.subheader("Reinforcement Learning Trading Agent")
 
