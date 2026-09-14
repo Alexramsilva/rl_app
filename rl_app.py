@@ -486,3 +486,69 @@ if ejecutar:
         "Este resultado corresponde a una simulación histórica "
         "y no garantiza rendimientos futuros."
     )
+########### Gráfico  ############
+# ============================================================
+# DATAFRAME DE PRUEBA CON ACCIONES
+# ============================================================
+
+df_test = df.iloc[window:].copy()
+
+# Ajustar longitud a las acciones generadas
+df_test = df_test.iloc[:len(actions)].copy()
+
+df_test["Action"] = actions
+
+# ============================================================
+# GRÁFICO DE SEÑALES DE TRADING
+# ============================================================
+
+st.subheader("Señales de compra y venta del agente PPO")
+
+fig4, ax4 = plt.subplots(figsize=(12, 6))
+
+# Precio
+ax4.plot(
+    df_test.index,
+    df_test["Close"],
+    label="Precio"
+)
+
+# Compras
+buy_signals = df_test[
+    df_test["Action"] == 1
+]
+
+# Ventas
+sell_signals = df_test[
+    df_test["Action"] == 2
+]
+
+ax4.scatter(
+    buy_signals.index,
+    buy_signals["Close"],
+    marker="^",
+    color="green",
+    s=80,
+    label="Compra"
+)
+
+ax4.scatter(
+    sell_signals.index,
+    sell_signals["Close"],
+    marker="v",
+    color="red",
+    s=80,
+    label="Venta"
+)
+
+ax4.set_title(
+    f"{ticker} - Señales del agente PPO"
+)
+
+ax4.set_xlabel("Fecha")
+ax4.set_ylabel("Precio")
+
+ax4.legend()
+ax4.grid(alpha=0.3)
+
+st.pyplot(fig4)
