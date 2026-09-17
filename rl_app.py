@@ -21,7 +21,7 @@ st.set_page_config(
 )
 
 st.image("NQH.svg", caption="", width=400)
-st.title("Nopal Quant")
+st.title("by Nopal Quant")
 st.subheader("Reinforcement Learning Trading Agent")
 
 st.write(
