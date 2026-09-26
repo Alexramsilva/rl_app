@@ -43,7 +43,7 @@ ticker = st.sidebar.text_input(
 
 periodo = st.sidebar.selectbox(
     "Periodo histórico",
-    ["6mo", "1y", "2y", "5y", "10y"],
+    ["5d","6mo", "1y", "2y", "5y", "10y"],
     index=2
 )
 
@@ -188,6 +188,7 @@ def descargar_datos(ticker, periodo):
         period=periodo,
         auto_adjust=True,
         progress=False
+        interval="1h"
     )
 
     if df.empty:
