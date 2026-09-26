@@ -187,7 +187,7 @@ def descargar_datos(ticker, periodo):
         ticker,
         period=periodo,
         auto_adjust=True,
-        progress=False
+        progress=False,
         interval="1h"
     )
 
