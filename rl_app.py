@@ -43,7 +43,7 @@ ticker = st.sidebar.text_input(
 
 periodo = st.sidebar.selectbox(
     "Periodo histórico",
-    ["5d","6mo", "1y", "2y", "5y", "10y"],
+    ["30d","6mo", "1y", "2y", "5y", "10y"],
     index=2
 )
 
