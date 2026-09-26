@@ -38,12 +38,12 @@ st.sidebar.header("Parámetros del modelo")
 
 ticker = st.sidebar.text_input(
     "Clave de Yahoo Finance",
-    value="BIMBOA.MX"
+    value="BTC-USD"
 ).upper().strip()
 
 periodo = st.sidebar.selectbox(
     "Periodo histórico",
-    ["30d","6mo", "1y", "2y", "5y", "10y"],
+    ["120d","6mo", "1y", "2y", "5y", "10y"],
     index=2
 )
 
