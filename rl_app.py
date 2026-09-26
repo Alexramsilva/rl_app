@@ -188,7 +188,7 @@ def descargar_datos(ticker, periodo):
         period=periodo,
         auto_adjust=True,
         progress=False,
-        interval="1h"
+        
     )
 
     if df.empty:
