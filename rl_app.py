@@ -288,7 +288,7 @@ ax.plot(
     label="Precio"
 )
 # Último dato en verde
-plt.scatter(
+ax.plot(
     df['Close'].iloc[-1],
     color='#00FF00',
     s=80,
