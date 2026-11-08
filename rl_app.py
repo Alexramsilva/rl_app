@@ -288,14 +288,14 @@ ax.plot(
     label="Precio"
 )
 # Último dato en verde
-ax.plot(
+ax.scatter(
     df.index[-1],
     df['Close'].iloc[-1],
     color='#00FF00',
     s=80,
-    label='Último dato'
+    label='Último dato',
+    zorder=5
 )
-
 
 ax.plot(
     df.index,
