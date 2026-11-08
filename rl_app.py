@@ -289,7 +289,7 @@ ax.plot(
 )
 # Último dato en verde
 plt.scatter(
-    df['Date'].iloc[-1],
+    df.index.iloc[-1],
     df['Close'].iloc[-1],
     color='#00FF00',
     s=80,
